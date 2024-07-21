@@ -53,6 +53,20 @@ curl -X POST http://localhost:11434/api/generate \
 ```
 
 
+Some more note:
+
+Stopping the ollama service : `systemctl stop ollama.service`
+
+~~Can also run from a docker container, by cloning this : https://github.com/valiantlynx/ollama-docker
+And then running `sudo docker compose up -d`
+But that doesn't work~~
+
+~~Start it again with : `systemctl start ollama.service`~~
+
+Nope .. I cannot get it to run again now ... trying a reinstall (`curl -fsSL https://ollama.com/install.sh | sh`) now ... 
+.. that still doesn't work -- the command should be, apparently `ollama serve`  but that is now saying address in use .. I'm going to try a reboot now ... 
+
+
 -------
 
 ## Lagos API Key Manager Setup
