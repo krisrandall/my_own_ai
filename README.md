@@ -55,11 +55,11 @@ curl -X POST http://localhost:11434/api/generate \
 
 -------
 
-## Public API (with Auth and Key Manager)
+## Lagos API Key Manager Setup
 
 I want to make the AI bots I create available to others,  
-And I want to rate-limit what they can hit my APIs with,
-So next I'm setting something up so that they can create API Keys,
+And I want to rate-limit what they can hit my APIs with,    
+So next I'm setting something up so that they can create API Keys,    
  (and pay to get extra usage on them).
 
 I'm investigating "Lago" : https://github.com/getlago/lago    
@@ -79,12 +79,16 @@ source .env
 docker compose up -d api
 
 # Create the database
-docker compose exec api rails db:create
+docker compose exec api rails db:create   # or may need to prefix docker commands with 'sudo' if your docker install is dumb like mine
 docker compose exec api rails db:migrate
 
 # Start all other components
 docker compose up
 ```
+
+Then go to : http://localhost/ to see it running
+
+*(Some info about how Lago works: https://getlago.com/docs/guide/introduction/welcome-to-lago)*   
 
 
 .... WIP ... 
